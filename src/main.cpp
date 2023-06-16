@@ -68,6 +68,8 @@ void setup_app()
     font_large = LV_FONT_DEFAULT;
     font_normal = LV_FONT_DEFAULT;
 
+logMemory();
+
     lv_coord_t tab_h;
     if(disp_size == DISP_LARGE) {
         tab_h = 70;
@@ -113,7 +115,7 @@ void setup_app()
     lv_theme_default_init(NULL, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED), LV_THEME_DEFAULT_DARK,
                           font_normal);
 #endif
-
+logMemory();
     tab_view = lv_tabview_create(lv_scr_act(), LV_DIR_TOP, tab_h);
 
     lv_obj_set_style_text_font(lv_scr_act(), font_normal, 0);
@@ -151,6 +153,7 @@ void setup_app()
     lv_label_set_text(label, "WIFI\n Status: " + WiFi.status());
 
     lv_obj_scroll_to_view_recursive(label, LV_ANIM_ON);
+logMemory();
 }
 
 void initializeTime() {
@@ -162,7 +165,7 @@ void initializeTime() {
     const int   daylightOffset_sec = 7200;
 
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-
+logMemory();
     Serial.println("NTP configured");
 }
 
@@ -174,7 +177,7 @@ void initializeWifi() {
       delay(1000);
       Serial.println("Connecting to WiFi...");
     }
-
+logMemory();
     Serial.println("Connected to WiFi");
 }
 
@@ -223,7 +226,7 @@ void initializeNostr() {
 //      "eden.nostr.land",
 //      "relay.orangepill.dev",
     };
-
+logMemory();
     int relayCount = sizeof(relays) / sizeof(relays[0]);
     
     nostr.setLogging(true);
@@ -234,10 +237,9 @@ void initializeNostr() {
     nostrRelayManager.setEventCallback("ok", okEvent);
     nostrRelayManager.setEventCallback("nip01", nip01Event);
     nostrRelayManager.setEventCallback("nip04", nip04Event);
-    logMemory();
     nostrRelayManager.connect();
 
-
+logMemory();
 //    String subscriptionString = "[\"REQ\", \"" + nostrRelayManager.getNewSubscriptionId() + "\", {\"authors\": [\"27c3d086c54a1862d38bf4f0ffb7c4f1be21a037b8ce3a964b8ed34bb340914f\"], \"kinds\": ["+EVENT_KIND_PRODUCT+"], \"limit\": 20}]";
 //    nostrRelayManager.enqueueMessage(subscriptionString.c_str());
 
