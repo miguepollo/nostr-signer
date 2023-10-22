@@ -231,7 +231,6 @@ logMemory();
     int relayCount = sizeof(relays) / sizeof(relays[0]);
     
     nostr.setLogging(true);
-    nostrRelayManager.setRelays(relays, relayCount);
     nostrRelayManager.setMinRelaysAndTimeout(2,10000);
 
     // Set some event specific callbacks here
