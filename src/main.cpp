@@ -266,7 +266,6 @@ void setup()
     initializeWifi();
     initializeTime();
     logMemory();
-    initializeNostr();
 }
 
 void loop()
