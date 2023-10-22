@@ -218,14 +218,14 @@ void nip04Event(const std::string& key, const char* payload) {
 
 void initializeNostr() {
     const char *const relays[] = {
-//      "relay.damus.io",
-//      "nostr.mom",
-//      "relay.nostr.bg",
+      "relay.damus.io",
+      "nostr.mom",
+      "relay.nostr.bg",
       "nos.lol",
       "nostr.bitcoiner.social",
       "nostr.wine",
-//      "eden.nostr.land",
-//      "relay.orangepill.dev",
+      "eden.nostr.land",
+      "relay.orangepill.dev",
     };
 logMemory();
     int relayCount = sizeof(relays) / sizeof(relays[0]);
