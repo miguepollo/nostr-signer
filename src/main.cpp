@@ -251,6 +251,7 @@ logMemory();
 
 void setup()
 {
+    initializeNostr();
     logMemory();
     Serial.begin(115200);
     Serial.println("   --------------- Starting app...");
@@ -259,8 +260,9 @@ void setup()
         #error Insufficient memory. Please set LV_MEM_SIZE to at least 38KB (38ul * 1024ul).  48KB is recommended.
     #endif
 
-    smartdisplay_init();
-    setup_app();
+//    smartdisplay_init();
+//    Serial.println("ANTES SETUP APP");
+//    setup_app();
     initializeWifi();
     initializeTime();
     logMemory();
