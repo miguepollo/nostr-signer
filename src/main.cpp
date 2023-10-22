@@ -1,8 +1,9 @@
-#include <Arduino.h>
-#include <esp32_smartdisplay.h>
-#include <WiFi.h>
-#include <NostrEvent.h>
-#include <NostrRelayManager.h>
+#include "Arduino.h"
+#include "esp32_smartdisplay.h"
+#include "WiFiClientSecure.h"
+#include "WiFi.h"
+#include "NostrEvent.h"
+#include "NostrRelayManager.h"
 #include "time.h"
 
 
