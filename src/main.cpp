@@ -138,11 +138,7 @@ void setup_app()
                       "\n"
                       "\n"
                       "\n"
-                      "Can you see it?\n"
-                      "please see it\n"
-                      "Thanks\n"
-                      "for\n"
-                      "collaborate.");
+                      "Can you see it?\n");
 
     label = lv_label_create(tab_stock);
     lv_label_set_text(label, "Second tab");
