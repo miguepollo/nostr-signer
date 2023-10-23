@@ -141,7 +141,11 @@ void setup_app()
                       "Can you see it?\n");
 
     label = lv_label_create(tab_stock);
-    lv_label_set_text(label, "Second tab");
+    lv_label_set_text(label, "In the second tab you can see the stock\n"
+    "of your products.If you don't have any\n"
+    "products, see orders for see your orders.\n"
+    "In the setup page you can change more things.\n"
+    );
 
     label = lv_label_create(tab_setup);
     lv_label_set_text(label, "WIFI\n Status: " + WiFi.status());
