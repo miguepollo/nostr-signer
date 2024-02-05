@@ -12,10 +12,10 @@
 /**********************
  *      SETUP
  **********************/
-char * SSID = "MIWIFI_2G_y36Y";
-char * wifi_password = "34sf36crhwnp";
-char const *nsecHex = "81468c8cb1d103a211482589d547aefa70005052ca30ddead9e0659a72629448";
-char const *npubHex = "0fa58617cd7be70fd5048f33683fb97c78d11ec32b266b1f25098de37a6caa63";
+char * SSID = "";
+char * wifi_password = "";
+char const *nsecHex = "";
+char const *npubHex = "";
 
 /**********************
  *      TYPEDEFS
